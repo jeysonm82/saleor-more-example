@@ -37,6 +37,30 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    #Agregar a las existentes
+    'django.contrib.sites',
+    # Local apps
+    'saleor.userprofile',
+    'saleor.product',
+    'saleor.cart',
+    'saleor.checkout',
+    'saleor.core',
+    'saleor.order',
+    'saleor.registration',
+    'saleor.dashboard',
+    'saleor.shipping',
+
+    # External apps
+    'versatileimagefield',
+    'babeldjango',
+    'bootstrap3',
+    'django_prices',
+    'emailit',
+    'mptt',
+    'payments',
+    'selectable',
+    'materializecssform',
+    'rest_framework',
 ]
 
 MIDDLEWARE_CLASSES = [
@@ -119,3 +143,6 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.9/howto/static-files/
 
 STATIC_URL = '/static/'
+AUTH_USER_MODEL = 'userprofile.User' # Es necesario usar este modelo User
+DEFAULT_CURRENCY = 'COP' # Moneda
+DEFAULT_WEIGHT = 'lb' # Unidad de peso
